@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'card',
     'bank',
     'api',
+    'offers',
     #DjangoCore
     'django.contrib.admin',
     'django.contrib.auth',

@@ -4,3 +4,8 @@ from django.db import models
 class Bank(models.Model):
     bank_id = models.AutoField(primary_key=True)
     name = models.CharField( max_length=50, unique=True)
+
+
+
+    def __str__(self):
+        return self.name
