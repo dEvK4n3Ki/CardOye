@@ -1,7 +1,9 @@
+from django.utils import timezone
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from bank.models import Bank
 from card.models import Card
+from django import forms
 
 
 class MyAccountManager(BaseUserManager):
@@ -36,7 +38,8 @@ class MyAccountManager(BaseUserManager):
 class Account(AbstractBaseUser):
     email = models.EmailField(verbose_name="email", max_length=60, unique=True)
     username = models.CharField(max_length=30, unique=True)
-    cards = models.JSONField()
+    password = forms.CharField(widget = forms.PasswordInput)
+    cards = models.JSONField(blank = True, null = True)
     date_joined = models.DateTimeField(
         verbose_name='date joined', auto_now_add=True)
     last_login = models.DateTimeField(verbose_name='last login', auto_now=True)
