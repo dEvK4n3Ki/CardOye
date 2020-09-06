@@ -21,4 +21,5 @@ from . import settings as settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/',include(APIURLS)),
+    path('', include('frontend.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
