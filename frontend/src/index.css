@@ -1,0 +1,46 @@
+body {
+    background-color: #1d3557;
+    color: #f1faee;
+    font-family: 'Montserrat', sans-serif;
+}
+
+legend {
+    background-color: #e63946;
+    color: #f1faee;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 20px;
+    width: 50%;
+    box-shadow: 0 8px 6px -6px black;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+fieldset {
+    padding: 1rem;
+}
+
+.form-label {
+    font-weight: bold;
+    font-size: large;
+    padding-top: 5px;
+    letter-spacing: 1px;
+}
+
+.form-control {
+    text-align: center;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.30s ease-in-out;
+    height: 3rem;
+    letter-spacing: 1px;
+    color: #1d3557;
+    box-shadow: 0 4px 3px -3px black;
+}
+
+.styled-button {
+    background-color: #1d3557;
+    color: #f1faee;
+    font-weight: bold;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}

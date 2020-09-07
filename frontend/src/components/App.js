@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
+import Login from './Login/Login';
 
 class App extends Component {
     constructor(props) {
@@ -11,7 +12,10 @@ class App extends Component {
 
     render() {
         return (
-            <div>Hello There!</div>
+            <React.Fragment>
+                <div>Hello There!</div>
+                <Login />
+            </React.Fragment>
         );
     }
 }
