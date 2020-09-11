@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'bank',
     'api',
     'offers',
+    'frontend',
+    'vendor',
     #DjangoCore
     'django.contrib.admin',
     'django.contrib.auth',
@@ -47,7 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'frontend'
+
 ]
 
 MIDDLEWARE = [
@@ -114,6 +116,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = "account.Account"
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
