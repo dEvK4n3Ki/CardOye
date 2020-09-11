@@ -1,0 +1,16 @@
+.login-container {
+    margin-top: 15vh;
+    text-align: center;
+}
+
+.login-card {
+    border-radius: 10px;
+    background-color: #457b9d;
+    text-align: center;
+    box-shadow: 0 1.5px 1.1px rgba(0, 0, 0, 0.028),
+    0 3.5px 2.7px rgba(0, 0, 0, 0.04),
+    0 6.6px 5px rgba(0, 0, 0, 0.05),
+    0 11.8px 8.9px rgba(0, 0, 0, 0.06),
+    0 22.1px 16.7px rgba(0, 0, 0, 0.072),
+    0 53px 40px rgba(0, 0, 0, 0.1);
+}
