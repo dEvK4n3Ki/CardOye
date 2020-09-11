@@ -2,7 +2,7 @@ from rest_framework import serializers
 from card.models import Card
 from bank.models import Bank
 from offers.models import Offers
-from account.models import Account
+from users.models import Users
 
 
 class CardSerializer(serializers.ModelSerializer):
@@ -20,7 +20,7 @@ class OffersSerializer(serializers.ModelSerializer):
         model = Offers
         fields = '__all__'
 
-class AccountSerializer(serializers.ModelSerializer):
+class UsersSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Account
+        model = Users
         fields = '__all__'

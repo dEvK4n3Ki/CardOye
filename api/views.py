@@ -2,16 +2,21 @@ import requests
 from rest_framework.response import Response
 from django.shortcuts import render, redirect, HttpResponse
 from rest_framework.decorators import api_view
-from CardOye.serializers import CardSerializer, BankSerializer, OffersSerializer, AccountSerializer, Card, Bank,Account, Offers 
+from CardOye.serializers import CardSerializer, BankSerializer, OffersSerializer, UsersSerializer, Card, Bank,Users, Offers 
 
 @api_view(['GET'])
 def APIViews(request):
     APIURLS = [
-    " / => APIHomepage",
-    "GetAllOffers/ => Get All Offers",
-    "GetBankCard/ => BANK FROM CARD",
-    "BankList/ => ALL Banks",
-    "BankCardList/ => CARDS FROM BANK",
+        "api / [name= 'API Homepage']",
+        "api / GetAllOffers / [name = 'Get All Offers']",
+        "api / GetBankCard / [name = 'GetBankCard']",
+        "api / BankList / [name = 'BankList']",
+        "api / BankCardList / [name = 'BankCardList']",
+        "api / CreateAccount / [name = 'CreateAccount']",
+        "api / ^rest-auth /",
+        "api / ^rest-auth/registration /",
+        "api / ^account /",
+        "api / ^accounts-rest/registration/account-confirm-email/(?P < key > .+) /$ [name = 'account_confirm_email']",
     ]
     return Response(APIURLS)
 
