@@ -1,0 +1,62 @@
+
+.navbar{
+    /* color: white; */
+    font-weight: bold;
+    background-color: rgba(69, 123, 157, 0.5);
+    box-shadow: 0 8px 6px -6px black;
+    
+    /* background-color: #2892D7; */
+}
+
+@media only screen and (min-width: 992px){
+    .navbar {
+        
+        height: 10vh;
+    }
+}
+
+.navbar-default {
+    background-image: none;
+    border: none;
+    border-radius: 0;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #080808;
+}
+
+.navbar-default .navbar-brand {
+    color: #080808;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #080808;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #080808;
+}
+
+
+
+
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+    color: #080808;
+    background-color: transparent;
+}
+
+img{
+  width: 130px;
+  height: 60px;
+}
+
+.nav-button {
+    border: none;
+    color: rgba(255, 255, 255, .5);
+    font-weight: bold;
+}
+
+.nav-button:hover {
+    color: white;
+}

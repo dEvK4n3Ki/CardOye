@@ -23,7 +23,7 @@ class Login extends React.Component {
             alert("Both fields are mandatory");
         }
         else {
-            this.setState({ btnLabel: "Logging in", loading: true });
+            this.setState({ btnLabel: "Logging in  ", loading: true });
             authenticationService.login(username, password)
                 .then(
                     user => {
@@ -32,7 +32,7 @@ class Login extends React.Component {
                     },
                     error => {
                         console.log(error);
-                        this.setState({ btn: "Login", loading: false });
+                        // this.setState({ btn: "Login", loading: false });
                     }
                 );
         }
@@ -78,7 +78,12 @@ class Login extends React.Component {
                             <Row style={{ margin: "1rem" }}>
                                 <Col>
                                     <Button className="styled-button" size="lg" onClick={this.login} >
-                                        {this.state.loading && <i className="spinner-border spinner-border-sm" role="status"></i>} {this.state.btnLabel}</Button>
+                                        <span>
+                                            {this.state.btnLabel}
+                                            {this.state.loading && <i className="spinner-border spinner-border-sm" role="status"
+                                            style={{verticalAlign: "middle"}}></i>}
+                                        </span>
+                                    </Button>
                                 </Col>
                             </Row>
                         </fieldset>

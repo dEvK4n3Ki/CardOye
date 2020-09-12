@@ -5,7 +5,7 @@ body {
 }
 
 legend {
-    background-color: #e63946;
+    background-color: #ef233c;
     color: #f1faee;
     text-align: center;
     margin-bottom: 2rem;
@@ -23,7 +23,7 @@ fieldset {
 .form-label {
     font-weight: bold;
     font-size: large;
-    padding-top: 5px;
+    padding-top: 10px;
     letter-spacing: 1px;
 }
 
@@ -35,7 +35,7 @@ fieldset {
     height: 3rem;
     letter-spacing: 1px;
     color: #1d3557;
-    box-shadow: 0 4px 3px -3px black;
+    box-shadow: 0 4px 3px -3px rgba(0, 0, 0, 0.5);
 }
 
 .styled-button {
