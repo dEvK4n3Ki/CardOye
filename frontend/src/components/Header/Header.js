@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Navbar, Nav, Button } from 'react-bootstrap';
 import './Header.css'
 
-import { faSignOutAlt, faSignInAlt, faBlog } from '@fortawesome/free-solid-svg-icons';
+import { faSignOutAlt, faSignInAlt, faBlog, faTags } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { authenticationService } from '../../services';
 
@@ -18,20 +18,22 @@ export default class Header extends Component {
 				<Navbar.Collapse id="responsive-navbar-nav">
 					<Nav className="mr-auto"></Nav>
 					<Nav>
+						<Nav.Link href="/offers">
+							<FontAwesomeIcon icon={faTags} color="black" /> &nbsp;All Offers
+						</Nav.Link>
 						<Nav.Link href="/blog">
-							<FontAwesomeIcon icon={faBlog} color="white" /> &nbsp;Blog
+							<FontAwesomeIcon icon={faBlog} color="black" /> &nbsp;Blog
 						</Nav.Link>
 						{
 							(() => {
 								if (authenticationService.currentUserValue) {
 									return <Button className="nav-button" variant="transparent" onClick={authenticationService.logout}>
-										Logout &nbsp;
-										<FontAwesomeIcon icon={faSignOutAlt} color="white" />
+										<FontAwesomeIcon icon={faSignOutAlt} color="black" /> &nbsp;Logout
 									</Button>
 								}
 								else {
 									return <Nav.Link href="/login">
-										Login/Signup &nbsp; <FontAwesomeIcon icon={faSignInAlt} color="white" />
+										<FontAwesomeIcon icon={faSignInAlt} color="black" /> &nbsp;Login/Signup 
 									</Nav.Link>
 								}
 							})()
