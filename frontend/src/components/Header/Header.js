@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Navbar, Nav, Button } from 'react-bootstrap';
 import './Header.css'
 
-import { faHome, faSignOutAlt, faSignInAlt, faMoneyBillAlt } from '@fortawesome/free-solid-svg-icons';
+import { faSignOutAlt, faSignInAlt, faBlog } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { authenticationService } from '../../services';
 
@@ -10,27 +10,17 @@ import { authenticationService } from '../../services';
 export default class Header extends Component {
 	render() {
 		return (
-			<Navbar collapseOnSelect expand="lg" variant="dark">
+			<Navbar collapseOnSelect expand="lg">
 				<Navbar.Brand href="/">
-					CardOye
+					Card<span style={{ color: "#806D40"}}>Oye</span>
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 				<Navbar.Collapse id="responsive-navbar-nav">
-					<Nav className="mr-auto">
-						<Nav.Link href="/">
-							<FontAwesomeIcon icon={faHome} color="white" /> &nbsp;Home
-						</Nav.Link>
-						<Nav.Link href="/offers">
-							<FontAwesomeIcon icon={faMoneyBillAlt} color="white" /> &nbsp;Offers
-						</Nav.Link>
-						{/* <Nav.Link href="/add">
-							<FontAwesomeIcon icon={faUserPlus} color="white" /> &nbsp;New Patient
-						</Nav.Link>
-						<Nav.Link href="/about">
-							<FontAwesomeIcon icon={faInfoCircle} color="white" /> &nbsp;About
-						</Nav.Link> */}
-					</Nav>
+					<Nav className="mr-auto"></Nav>
 					<Nav>
+						<Nav.Link href="/blog">
+							<FontAwesomeIcon icon={faBlog} color="white" /> &nbsp;Blog
+						</Nav.Link>
 						{
 							(() => {
 								if (authenticationService.currentUserValue) {
@@ -41,7 +31,7 @@ export default class Header extends Component {
 								}
 								else {
 									return <Nav.Link href="/login">
-										Login &nbsp; <FontAwesomeIcon icon={faSignInAlt} color="white" />
+										Login/Signup &nbsp; <FontAwesomeIcon icon={faSignInAlt} color="white" />
 									</Nav.Link>
 								}
 							})()

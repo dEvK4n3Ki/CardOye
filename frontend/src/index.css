@@ -1,18 +1,19 @@
 body {
-    background-color: #1d3557;
-    color: #f1faee;
+    background-color: rgba(49, 123, 34, 0.3);
+    /* background-color: #93827F; */
+    color: black;
     font-family: 'Montserrat', sans-serif;
 }
 
 legend {
-    background-color: #ef233c;
+    background-color: #317B22;
     color: #f1faee;
     text-align: center;
     margin-bottom: 2rem;
     padding: 20px;
     width: 50%;
     box-shadow: 0 8px 6px -6px black;
-    border-radius: 5px;
+    border-radius: 10px;
     font-weight: bold;
 }
 
@@ -35,11 +36,12 @@ fieldset {
     height: 3rem;
     letter-spacing: 1px;
     color: #1d3557;
-    box-shadow: 0 4px 3px -3px rgba(0, 0, 0, 0.5);
+    border: none;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
 }
 
 .styled-button {
-    background-color: #1d3557;
+    background-color: #5448C8;
     color: #f1faee;
     font-weight: bold;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);

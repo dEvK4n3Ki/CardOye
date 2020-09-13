@@ -6,6 +6,8 @@ import Login from './Login/Login';
 import Admin from './Admin/Admin';
 import Offers from './Offers/Offers';
 import Header from './Header/Header';
+import Home from './Home/Home';
+import Register from './Register/Register';
 import { history } from '../helpers';
 
 class App extends Component {
@@ -24,8 +26,9 @@ class App extends Component {
                 <Router history={history}>
                     <div id="page-wrap">
                         <Switch>
-                            <Route exact path="/" component={Login} />
+                            <Route exact path="/" component={Home} />
                             <Route exact path="/login" component={Login} />
+                            <Route exact path="/register" component={Register} />
                             <Route exact path="/offers" component={Offers} />
                             <Route exact path="/uiadmin" component={Admin} />
                         </Switch>

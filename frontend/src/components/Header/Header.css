@@ -1,16 +1,18 @@
 
 .navbar{
-    /* color: white; */
     font-weight: bold;
-    background-color: rgba(69, 123, 157, 0.5);
-    box-shadow: 0 8px 6px -6px black;
-    
-    /* background-color: #2892D7; */
+    background-color: white;
+    color: black;
+    box-shadow: 0 4px 3px -3px black;
+}
+
+.navbar-brand {
+    letter-spacing: 1px;
+    font-style: italic;
 }
 
 @media only screen and (min-width: 992px){
     .navbar {
-        
         height: 10vh;
     }
 }
@@ -38,8 +40,6 @@
 }
 
 
-
-
 .navbar-default .navbar-nav>li>a:focus,
 .navbar-default .navbar-nav>li>a:hover {
     color: #080808;
@@ -53,10 +53,14 @@ img{
 
 .nav-button {
     border: none;
-    color: rgba(255, 255, 255, .5);
+    /* color: rgba(255, 255, 255, .5); */
     font-weight: bold;
 }
 
 .nav-button:hover {
-    color: white;
+    /* color: white; */
+}
+
+.nav-link {
+    color: black;
 }

@@ -23,6 +23,7 @@ urlpatterns = [
     path('offers/', include('frontend.urls')),
     path('uiadmin/', include('frontend.urls')),
     path('login/', include('frontend.urls')),
+    path('register/', include('frontend.urls')),
     path('admin/', admin.site.urls),
     path('api/',include(APIURLS)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

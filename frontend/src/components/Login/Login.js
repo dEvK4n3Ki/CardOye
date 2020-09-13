@@ -2,6 +2,7 @@ import React from 'react';
 import './Login.css';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import {authenticationService} from '../../services';
+import { Link } from 'react-router-dom';
 
 class Login extends React.Component {
     constructor(props) {
@@ -84,6 +85,11 @@ class Login extends React.Component {
                                             style={{verticalAlign: "middle"}}></i>}
                                         </span>
                                     </Button>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <Link to="/register">Not a member? Register here</Link>
                                 </Col>
                             </Row>
                         </fieldset>
