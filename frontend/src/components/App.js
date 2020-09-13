@@ -27,8 +27,8 @@ class App extends Component {
                     <div id="page-wrap">
                         <Switch>
                             <Route exact path="/" component={Home} />
+                            <Route path="/register" component={Register} />
                             <Route exact path="/login" component={Login} />
-                            <Route exact path="/register" component={Register} />
                             <Route exact path="/offers" component={Offers} />
                             <Route exact path="/uiadmin" component={Admin} />
                         </Switch>

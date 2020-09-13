@@ -1,8 +1,7 @@
 import React from 'react';
 import './Login.css';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import {authenticationService} from '../../services';
-import { Link } from 'react-router-dom';
+import { authenticationService } from '../../services';
 
 class Login extends React.Component {
     constructor(props) {
@@ -82,14 +81,16 @@ class Login extends React.Component {
                                         <span>
                                             {this.state.btnLabel}
                                             {this.state.loading && <i className="spinner-border spinner-border-sm" role="status"
-                                            style={{verticalAlign: "middle"}}></i>}
+                                                style={{ verticalAlign: "middle" }}></i>}
                                         </span>
                                     </Button>
                                 </Col>
                             </Row>
                             <Row>
                                 <Col>
-                                    <Link to="/register">Not a member? Register here</Link>
+                                    <a href="/register">
+                                        Not a member? Register here
+                                    </a>
                                 </Col>
                             </Row>
                         </fieldset>
