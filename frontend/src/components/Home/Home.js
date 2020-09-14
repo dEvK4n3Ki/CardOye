@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
 
-import Carousel from '../Carousel/Carousel';
+import Slider from '../Carousel/Carousel';
 
 class Home extends React.Component {
     constructor(props) {
@@ -14,8 +14,7 @@ class Home extends React.Component {
     render() {
         return (
             <div className="home-container">
-                Home Page
-                <Carousel />
+                <Slider />
             </div>
         )
     }

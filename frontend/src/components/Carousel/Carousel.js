@@ -1,74 +1,72 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Carousel } from 'react-bootstrap';
+
+// import S from './CarouselImg/event.jpg';
+// import S1 from './CarouselImg/1/1.jpg';
+// import S2 from './CarouselImg/2/2.jpg';
+// import S3 from './CarouselImg/3/3.jpg';
+// import S4 from './CarouselImg/4/4.jpg';
+// import S5 from './CarouselImg/5/5.jpg';
+
+import S1 from './CarouselImg/img1.jpg';
+import S2 from './CarouselImg/img2.jpg';
+import S3 from './CarouselImg/img3.jpg';
+
+
 import './Carousel.css';
 
-import img1 from '../../../assets/img1.jpg';
-import img2 from '../../../assets/img2.jpg';
-import img3 from '../../../assets/img3.jpg';
+export default class Slider extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
-export default function Carousel(props) {
-    React.useEffect(() => {
-        showSlides(slideIndex);
-    });
-
-    var slideIndex = 1;
-
-    // Next/previous controls
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    // Thumbnail image controls
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-    }
-
+  render() {
     return (
-        <React.Fragment>
-            <div className="slideshow-container">
-
-                <div className="mySlides fade">
-                    <div className="numbertext">1 / 3</div>
-                    <img src={img1} alt="Image1" style={{width: "100%"}} />
-                    <div className="text">Caption Text</div>
-                </div>
-
-                <div className="mySlides fade">
-                    <div className="numbertext">2 / 3</div>
-                    <img src={img2} alt="Image2" style={{ width: "100%" }} />
-                    <div className="text">Caption Two</div>
-                </div>
-
-                <div className="mySlides fade">
-                    <div className="numbertext">3 / 3</div>
-                    <img src={img3} alt="Image3" style={{ width: "100%" }} />
-                    <div className="text">Caption Three</div>
-                </div>
-
-                <a className="prev" onClick={() => plusSlides(-1)}>&#10094;</a>
-                <a className="next" onClick={() => plusSlides(1)}>&#10095;</a>
-            </div>
-            <br/>
-            <div style={{textAlign: "center"}}>
-                <span className="dot" onClick={() => currentSlide(1)}></span>
-                <span className="dot" onClick={() => currentSlide(2)}></span>
-                <span className="dot" onClick={() => currentSlide(3)}></span>
-            </div>
-        </React.Fragment>
-    )
+      // <div style={{ backgroundColor: "#0a5767" }}>
+        <Carousel>
+          <Carousel.Item>
+            <img
+              className="cImage d-block w-100 h-50"
+              src={S1}
+              height={200}
+              alt="First slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="cImage d-block w-100 h-50"
+              src={S2}
+              height={200}
+              alt="Second slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="cImage d-block w-100 h-50"
+              src={S3}
+              height={200}
+              alt="Third slide"
+            />
+          </Carousel.Item>
+          {/* <Carousel.Item>
+            <img
+              className="cImage d-block w-100 h-50"
+              width={200}
+              src={S4}
+              alt="Fourth slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="cImage d-block w-100 h-50"
+              width={200}
+              src={S5}
+              alt="Fifth slide"
+            />
+          </Carousel.Item> */}
+        </Carousel>
+      // </div>
+    );
+  }
 }
